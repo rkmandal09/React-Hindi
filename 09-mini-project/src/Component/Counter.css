@@ -1,0 +1,64 @@
+.storeCount{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 325px;
+  font-size: 100px;
+  margin : 20px 20px;
+  border-radius: 5px;
+  color: #2563eb;
+  background-color: #f4f4f4;
+  font-weight: bold;
+  border: 2px solid #2563eb;
+}
+.increase{
+  font-size: 24px;
+  padding: 10px 20px;
+  margin: 0px 20px;
+  background-color: #2563eb;
+  border-radius: 8px;
+  color: white;
+}
+.decrease{
+  font-size: 24px;
+  padding: 10px 20px;
+  margin: 0px 20px;
+  background-color: #2563eb;
+  border-radius: 8px;
+  color: white;
+}
+.jump5{
+  font-size: 24px;
+  padding: 10px 16px;
+  margin: 20px 20px;
+  background-color: #2563eb;
+  border-radius: 8px;
+  color: white;
+}
+.reset{
+  font-size: 24px;
+  padding: 10px 31px;
+  margin: 0px 20px;
+  background-color: red;
+  border-radius: 8px;
+  color: white;
+  border: 2px solid red;
+}
+.increase:hover,
+.decrease:hover,
+.jump5:hover{
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+.increase:active,
+.decrease:active,
+.jump5:active{
+  transform:scale(0.98);
+}
+.reset:hover{
+  background-color: red;
+  transform: scale(1.05);
+}
+.reset:active{
+  transform:scale(0.98);
+}
