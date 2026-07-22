@@ -1,6 +1,4 @@
-import Counter from "./Component/Counter";
-import Like from "./Component/Like";
-
+import React from 'react'
 import { useState } from "react";
 
 
@@ -29,10 +27,38 @@ const App = () => {
     setNum(prev => (prev + 1));
     setNum(prev => (prev+ 1)); 
   }
- 
 
+  
+const [title, setTitle] = useState("")
+
+const submitHandler = (e) => {
+  e.preventDefault(e)
+  console.log("form submited by",title);
+  setTitle("")
+}
+ 
   return (
     <div className="pairent">
+       <div className="form">
+        
+          <form onSubmit={(e) => {
+            submitHandler(e)
+          }}>
+
+            <input 
+            type="text" 
+            placeholder="Enter your Name"
+            value={title}
+            onChange={(e) => {
+              setTitle(e.target.value)
+            }}/>
+
+            <button>submit</button>
+
+          </form>
+
+       </div>
+      
 
      <h1>{num}</h1>
      <button onClick={buttonClicked}>Batch Update</button>
@@ -163,14 +189,13 @@ const App = () => {
           Reset
         </button>
       </div>
-
-      {/* <Counter />
-      <Like /> */}
     </div>
   );
 };
 
 export default App;
+
+
 
 
 
